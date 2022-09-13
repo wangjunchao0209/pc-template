@@ -1,0 +1,74 @@
+
+.switch {
+    $activeColor: var(--active-color);
+    border-radius: 25px;
+    position: relative;
+    background-color: $activeColor;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+    .circle {
+        transition: all .5s;
+        background-color: white;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .unactived {
+        left: 2px;
+    }
+    .switch-text {
+        color: #fff;
+        font-size: 12px;
+        position: absolute;
+        transition: all .5s;
+    }
+    .unactived-text {
+        right: 7px;
+    }
+}
+.disabled.switch {
+    background-color: $disableColor;
+}
+.switch-mini {
+    width: 40px;
+    height: 20px;
+    .circle {
+        width: 16px;
+        height: 16px;
+    }
+    .actived {
+        left: 22px;
+    }
+    .actived-text {
+        right: 20px;
+    }
+}
+.switch-small {
+    width: 45px;
+    height: 23px;
+    .circle {
+        width: 19px;
+        height: 19px;
+    }
+    .actived {
+        left: 24px;
+    }
+    .actived-text {
+        right: 25px;
+    }
+}
+.switch-large {
+    width: 50px;
+    height: 27px;
+    .circle {
+        width: 23px;
+        height: 23px;
+    }
+    .actived {
+        left: 25px;
+    }
+    .actived-text {
+        right: 28px;
+    }
+}

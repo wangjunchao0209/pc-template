@@ -1,0 +1,68 @@
+.shadow.ls-calendar {
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,0.12), 0 6px 16px 0 rgba(0,0,0,0.08), 0 9px 28px 8px rgba(0,0,0,0.05);
+}
+.border.ls-calendar {
+    border-right: 1px solid #E9E9E9;
+}
+.t-active {
+    background-color: #ecf2fb;
+    color: $mainColor!important;
+    border-radius: 0;
+}
+.ls-calendar {
+    user-select: none;
+    background-color: #FCFCFD;
+    overflow-y: auto;
+    border-radius: 3px;
+    min-height: 200px;
+    font-size: 12px;
+    .is-today {
+        color: $mainColor;
+    }
+    .r {
+        color: $errorColor;
+    }
+    .ls-calendar-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        .ls-calendar-day {
+            text-align: center;
+        }
+    }
+    .ls-calendar-body {
+        padding: 0 20px 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .ls-calendar-date {
+            text-align: center;
+            cursor: pointer;
+            margin: 5px 1px 7px;
+            position: relative;
+        }
+        .status.ls-calendar-date:after {
+            content: '●';
+            color: $mainColor;
+            font-size: 12px;
+            position: absolute;
+            bottom: -17.5px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .ls-calendar-date.round {
+            border-radius: 50%;
+        }
+        .not-current-m {
+            color: #C4C4C4;
+        }
+        .active.ls-calendar-date {
+            background-color: $mainColor;
+            color: white;
+        }
+    }
+    .btns {
+        text-align: right;
+    }
+}

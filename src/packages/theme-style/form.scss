@@ -1,0 +1,26 @@
+.input-list {
+    width: 100%;
+    padding: 0 15px;
+    margin: 5px 0;
+    .is-title {
+        font-size: .75vw;
+        margin-right: 10px;
+        position: relative;
+        width: 75px;
+        white-space: nowrap;
+    }
+}
+.hor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ver {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.baseline {
+    align-items: flex-start;
+}

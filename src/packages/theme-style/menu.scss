@@ -1,0 +1,79 @@
+
+$height: var(--everyheight);
+.slider {
+    width: 12vw;
+    min-width: 205px;
+    user-select: none;
+    transition: all 0.3s;
+    height: 0;
+    .active {
+        > .assign-color {
+            color: $mainColor;
+            &:deep .svg path {
+                fill: $mainColor
+            }
+        }
+        > .borColor {
+            transition: border-color 0.5s;
+            border-color: $mainColor !important;
+        }
+    }
+    .rotate {
+        > .nav-item .arrow {
+            transform: rotate(180deg);
+            transform-origin: 50%;
+        }
+    }
+    .unactive {
+        height: 0;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8vw;
+        padding: 0 $moduleGap;
+        overflow: hidden;
+        .borColor {
+            border-left: 2px solid #e4ebf1;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 15px;
+            cursor: pointer;
+            height: $height;
+            .names {
+                display: flex;
+                align-items: center;
+                .icons, .svg {
+                    width: $TitleFontSize;
+                    margin-right: 5px;
+                }
+            }
+            &:hover {
+                color: $mainColor;
+                &:deep .svg path {
+                    fill: $mainColor
+                }
+            }
+            .arrow {
+                transition: transform 0.5s;
+                font-size: 12px;
+                float: right;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1920px) {
+    .nav {
+        font-size: 0.8vw !important;
+    }
+}
+@media screen and (max-width: 1536px) {
+    .nav {
+        font-size: 0.85vw !important;
+    }
+}

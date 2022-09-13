@@ -1,0 +1,159 @@
+@mixin backColor {
+    background-color: $mainColor !important;
+}
+
+@mixin borderColor {
+    border-color: $mainColor !important;
+}
+
+:deep {
+    .el-select-v2__wrapper.is-focused,
+    .el-select-v2__wrapper:hover,
+    .el-input__inner:hover,
+    .el-input-number__decrease:hover
+        ~ .el-input:not(.is-disabled)
+        .el-input__inner,
+    .el-input-number__increase:hover
+        ~ .el-input:not(.is-disabled)
+        .el-input__inner,
+    .el-textarea__inner:hover,
+    .el-checkbox__inner:hover,
+    .el-checkbox__input.is-focus .el-checkbox__inner {
+        transition: all 0.5s;
+        @include borderColor;
+    }
+    .el-select-v2__wrapper.is-focused,
+    .el-input__inner:not(.is-error):focus,
+    .el-textarea__inner:not(.is-error):focus,
+    .el-input__inner:active,
+    .el-select .el-input.is-focus .el-input__inner,
+    .el-textarea__inner:active {
+        box-shadow: 0px 0px 7px -2px $mainColor;
+        @include borderColor;
+    }
+    .el-radio__input.is-checked + .el-radio__label,
+    .el-checkbox__input.is-checked + .el-checkbox__label {
+        color: $mainColor;
+    }
+    .el-radio__input.is-checked .el-radio__inner,
+    .el-checkbox__input.is-checked .el-checkbox__inner {
+        @include borderColor;
+        @include backColor;
+    }
+    .el-checkbox {
+        min-height: 32px;
+    }
+    .limit {
+        input.el-input__inner {
+            padding-left: 10px;
+            padding-right: 58px;
+        }
+        .el-input__count-inner {
+            padding: 0;
+            letter-spacing: -1px;
+            background-color: transparent;
+        }
+    }
+    .el-form {
+        .el-form-item {
+            margin-bottom: 15px;
+        }
+        .el-form-item__content {
+            display: flex;
+            align-items: center;
+        }
+        .el-form-item.no-label .el-form-item__content {
+            margin-left: 0 !important;
+            margin-right: 10px;
+        }
+        .el-form-item__error {
+            padding: 0;
+        }
+        .el-form-item__label {
+            font-size: $TitleFontSize;
+        }
+        .el-form-item.is-error {
+            .el-select-v2__wrapper {
+                border-color: $errorColor;
+            }
+        }
+        .el-textarea {
+            .el-input__count {
+                background-color: transparent;
+            }
+        }
+    }
+    .el-form.row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .el-form-item {
+            margin: 5px 0;
+        }
+    }
+}
+
+// 挂在到body上的元素
+.el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+    @include backColor;
+}
+.in-range.start-date .el-date-table-cell__text,
+.in-range.end-date .el-date-table-cell__text {
+    color: #fff !important;
+    @include backColor;
+}
+.el-select-dropdown__option-item.hover,
+.el-select__popper
+.el-date-table td.available:hover,
+.el-date-table td.today .el-date-table-cell__text,
+.el-year-table td.today .cell {
+    color: $mainColor;
+}
+.el-select-dropdown__option-item.is-selected:not(.is-multiple), .el-select-dropdown__item.selected {
+    background-color: rgba(4, 161, 126, 0.12);
+    color: $darkGreen !important;
+}
+.el-select-dropdown__item {
+    margin: 3px 0;
+    font-size: 12px;
+}
+.el-date-picker {
+    width: 260px !important;
+    .el-date-picker__header-label {
+        font-size: 12px;
+    }
+}
+.el-date-range-picker {
+    width: 480px !important;
+    box-shadow: 0px 0px 4px -2px $mainColor;
+    .el-date-picker__header-label {
+        font-size: 12px;
+    }
+}
+
+.el-range-editor.is-active {
+    box-shadow: 0px 0px 7px -2px $mainColor;
+    @include borderColor;
+}
+.el-date-picker .el-picker-panel__content,
+.el-date-range-picker .el-picker-panel__content {
+    width: 240px !important;
+    .el-date-range-picker__header > div {
+        font-size: 12px;
+    }
+}
+.el-loading-mask .circular .path {
+    stroke: $mainColor !important;
+}
+.main-module .el-loading-mask {
+    position: sticky!important;
+    height: 100%;
+}
+
+.el-button--primary {
+    @include borderColor;
+    @include backColor;
+    &:hover {
+        background-color: $mainColorHover!important;
+    }
+}

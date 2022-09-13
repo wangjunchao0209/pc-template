@@ -1,0 +1,43 @@
+.ls-trans-item {
+    width: 41%;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .trans-title {
+        display: flex;
+        align-items: center;
+        .title-name {
+            margin-left: $moduleGap;
+            font-size: $TitleFontSize;
+        }
+    }
+    .trans-input {
+    }
+    .trans-box {
+        padding-top: 15px;
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        .no-data {
+            width: 100%;
+            flex: 1;
+            color: #a9a9a9;
+            text-align: center;
+            line-height: 3;
+        }
+    }
+}
+:deep {
+    .el-checkbox__label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 5px 0 5px 15px;
+        font-size: $TitleFontSize;
+    }
+}

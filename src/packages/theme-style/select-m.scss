@@ -1,0 +1,58 @@
+@import './select.scss';
+@import './tag.scss';
+.ls-select-mult-mini {
+    @include mini;
+}
+.ls-select-mult-mini.fold {
+    @include miniMin;
+}
+.ls-select-mult-small {
+    @include small
+}
+.ls-select-mult-small.fold {
+    @include smallMin;
+}
+.ls-select-mult-large {
+    @include large
+}
+.ls-select-mult-large.fold {
+    @include largeMin;
+}
+.ls-select-mult {
+    width: 220px;
+    border: 1px solid $lightGray;
+    border-radius: 3px;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    .ls-select-mult-value {
+        flex: 1;
+        padding-left: 10px;
+        .len {
+            font-size: 12px;
+            background-color: $mainColor;
+            padding: 0 3px;
+            color: white;
+            border-radius: 2px;
+        }
+    }
+    .rotateIcon {
+        transform: rotate(180deg);
+        transform-origin: 50%;
+    }
+    .icons-input {
+        height: 100%;
+        width: 1vw;
+        transition: all .5s;
+        margin: 0 8px;
+    }
+    &:hover {
+        border-color: $mainColor;
+    }
+}
+.ls-select-mult.actived {
+    box-shadow: 0px 0px 7px -2px $mainColor;
+    border-color: $mainColor;
+}

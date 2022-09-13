@@ -1,0 +1,45 @@
+.ls-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 15px 0;
+    .total {
+        font-size: small;
+        color: #808387;
+        margin: 0 5px;
+    }
+    .jump {
+        padding: 0 10px;
+        font-size: small;
+        display: flex;
+        align-items: center;
+        border: 1px solid #d5dee7;
+        border-radius: 1px;
+        margin: 0 5px;
+        color: #324558;
+        height: 100%;
+        .ls-pagination-space {
+            margin: 0 5px;
+        }
+    }
+    input {
+        outline: none;
+        border: none;
+        width: 40px;
+        position: relative;
+        top: -1px;
+    }
+}
+.ls-pagination-mini {
+    @include mini;
+    line-height: 1;
+}
+.ls-pagination-small {
+    @include small;
+    line-height: 1;
+}
+.ls-pagination-large {
+    @include large;
+    line-height: 1;
+}

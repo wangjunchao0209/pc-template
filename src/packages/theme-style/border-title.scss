@@ -1,0 +1,17 @@
+.title {
+    font-size: 14px;
+    position: relative;
+    left: 15px;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 1px;
+        left: -15px;
+        width: 5px;
+        height: 16px;
+        background-color: $mainColor;
+        margin-right: 10px;
+        transform: skew(0deg, -50deg);
+    }
+}

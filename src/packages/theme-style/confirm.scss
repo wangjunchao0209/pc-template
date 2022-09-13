@@ -1,0 +1,30 @@
+.content-d {
+    width: 100%;
+    text-align: center;
+    font-size: 1vw;
+    padding: 0 1.5vw;
+    transition: all .5s;
+    .main-title {
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .snd-text {
+        color: #AEAEAE;
+        padding: 15px 0;
+        font-size: .9vw;
+    }
+}
+.btn {
+    display: flex;
+    width: 100%;
+    padding: 25px;
+    justify-content: center;
+}
+.confirm-enter-from, .confirm-leave-to{
+    opacity: 0;
+    transform: scale(0.9);
+}
+.confirm-enter-active, .confirm-leave-active{
+    transform-origin: top center;
+    transition: opacity .4s cubic-bezier(0.5, 0, 0, 1.25), transform .2s cubic-bezier(0.5, 0, 0, 1.25);
+}

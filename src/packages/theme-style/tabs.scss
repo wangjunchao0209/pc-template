@@ -1,0 +1,27 @@
+.tabs {
+    position: relative;
+    font-size: 16px;
+    color: #334458;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 5px .9vw;
+    user-select: none;
+    // border-bottom: 1px solid #ECF1F5;
+    .actived {
+        color: $mainColor;
+    }
+    .tab-item {
+        white-space: pre;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-right: 30px;
+    }
+    .under {
+        transition: all 0.4s;
+        position: absolute;
+        bottom: 0;
+        height: 3px;
+        border-radius: 6px;
+        background-color: $mainColor;
+    }
+}

@@ -1,0 +1,33 @@
+.search-module {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: $moduleGap;
+    background-color: white;
+    padding: $moduleGap;
+    border-radius: 2px;
+    position: relative;
+    .show {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        color: $mainColor;
+        cursor: pointer;
+        padding: 8px 12px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        .arrow {
+            width: 14px;
+            margin-left: 5px;
+            transition: all .5s;
+            transform: rotate(180deg);
+            &:deep path {
+                fill: $mainColor
+            }
+        }
+        .rotate {
+            transform: rotate(0deg);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+.ls-select-dropdown{
+    position: fixed;
+    background-color: #FCFCFD;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,0.12), 0 6px 16px 0 rgba(0,0,0,0.08), 0 9px 28px 8px rgba(0,0,0,0.05);
+    max-height: 200px;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    .no-data {
+        font-size: 14px;
+        color: rgba(50,69,88,0.60);
+        padding: 10px;
+        text-align: center;
+    }
+}

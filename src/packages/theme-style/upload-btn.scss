@@ -1,0 +1,89 @@
+.ls-upload-btn {
+    position: relative;
+    min-height: 40px;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    .btn-u {
+        height: 32px;
+        width: 100px;
+        overflow: hidden;
+        cursor: pointer;
+        .upload-input {
+            height: 32px;
+            width: 92px;
+            position: absolute;
+            top: 0;
+            left: 5px;
+            z-index: 99999;
+            opacity: 0;
+        }
+        &:hover {
+            &:deep .ls-button {
+                background-color: $mainColorHover;
+            }
+        }
+    }
+    .desc {
+        margin: 5px 0 0 5px;
+        color: #999;
+        font-size: 12px;
+        white-space: pre;
+    }
+    .file-name {
+        font-size: 12px;
+        padding: 7px 5px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .f-name {
+            flex: .9;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .close-icon {
+            width: 15px;
+            cursor: pointer;
+            visibility: hidden;
+            &:deep path {
+                fill: #dbdada
+            }
+            &:hover {
+                @include svgColor($mainColor)
+            }
+        }
+        &:hover {
+            .close-icon {
+                visibility: visible;
+            }
+        }
+    }
+    .del-icon {
+        cursor: pointer;
+        position: absolute;
+        color: white;
+        width: 35px;
+        height: 35px;
+        z-index: 990;
+        top: -12px;
+        right: -12px;
+        border-radius: 50%;
+        padding: 5px;
+        font-weight: 600;
+        &:deep path {
+            fill: #dbdada
+        }
+        &:hover {
+            @include svgColor(#ccc)
+        }
+    }
+    
+    .prog {
+        overflow: hidden;
+    }
+    .no-file {
+        border: 1px dashed #ccc;
+        border-radius: 4px;
+    }
+}

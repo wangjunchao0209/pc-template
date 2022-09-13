@@ -1,0 +1,206 @@
+/* 
+    所有配色 样式 统一
+    author wangjunchao
+*/
+// 主色调
+$mainColor: #04a17e;
+// 主题黑
+$mainBlackColor: #0a121a;
+// 背景灰色
+$backColorGray: #edeff3;
+
+$gray: #b3c2ce;
+// hover主色调
+$mainColorHover: #1fad8a;
+// 重要文字信息
+$mainTitleColor: #334458;
+// 次要文字信息
+$sndTitleColor: #314358;
+// 小区域次要信息
+$smallAreaTextColor: #7c8b9b;
+// 提示禁用占位
+$disableBackColor: #eaeff4;
+$disableColor: #c4c4c4;
+// 警示 强调
+$warningColor: #f8991d;
+$warningColorHover: #f5ba6d;
+// 信息提示
+$noticeColor: #3fa0ff;
+$noticeColorHover: #5dc0fa;
+// 错误警告
+$errorColor: #fd6353;
+$errorColorHover: #fc8174;
+
+$defaultBorderColor: #d9d9d9;
+$defaultColor: #334458;
+
+$navIconDefaultColor: #a7a1a1;
+// 辅助色优先
+// 紫色
+$purple: #bd67df;
+// 蓝色
+$blue: #399bf6;
+// 橘红
+$orangeRed: #ff7764;
+// 浅黄
+$lightYellow: #ffc05d;
+
+// 辅助色次选
+// 粉色
+$pink: #ff99c3;
+// 深绿
+$darkGreen: #1d9493;
+// 橘色
+$orange: #ff9844;
+// 深紫
+$darkPurple: #945fb9;
+// 浅蓝
+$lightBlue: #6cc8ec;
+// 深灰
+$darkGray: #5d7092;
+// 浅灰
+$lightGray: #a7b3c7;
+
+// 导航字号
+$NavFontSize: 0.82vw;
+// 标题字号
+$TitleFontSize: 0.85vw;
+// 突出字号
+$ImportantFontSize: 0.88vw;
+
+$ImportantTitleFontSize: 1.1vw;
+
+$ImportantDialogTitleFontSize: 1.3vw;
+// 副标题字号
+$NsndTitleSize: 0.75vw;
+
+$miniFontSize: 0.85vw;
+$smallFontSize: 0.92vw;
+$largeFontSize: 1.05vw;
+// 模块间距
+$moduleGap: 1vw;
+// 组件间距
+$componentGap: 0.77vw;
+
+@mixin mini {
+    height: 32px;
+    line-height: 32px;
+    font-size: $miniFontSize;
+}
+@mixin miniMin {
+    min-height: 32px;
+    line-height: 1;
+    height: auto;
+}
+@mixin miniWidth {
+    width: 32px;
+}
+@mixin small {
+    height: 38px;
+    line-height: 38px;
+    font-size: $smallFontSize;
+}
+@mixin smallMin {
+    min-height: 38px;
+    line-height: 1;
+    height: auto;
+}
+@mixin smallWidth {
+    width: 38px;
+}
+@mixin large {
+    height: 44px;
+    line-height: 44px;
+    font-size: $largeFontSize;
+}
+@mixin largeMin {
+    min-height: 44px;
+    line-height: 1;
+    height: auto;
+}
+
+@mixin largeWidth {
+    width: 44px;
+}
+
+@mixin svgColor($color) {
+    &:deep path {
+        transition: all 0.3s;
+        fill: $color;
+    }
+}
+
+@mixin disabled {
+    background-color: $disableBackColor !important;
+    color: $disableColor;
+    cursor: not-allowed;
+}
+
+::selection {
+    color: #fff;
+    background: $mainColor;
+}
+.is-important {
+    position: relative;
+}
+.is-important:before {
+    content: "*";
+    color: #ff0000;
+    font-size: 1.3vw;
+    position: absolute;
+    left: -0.6vw;
+    top: -2px;
+}
+.placeholder {
+    color: $lightGray;
+}
+.isOpen {
+    height: 50px !important;
+    overflow: hidden;
+}
+@mixin noScroll {
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 6px;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    display: block;
+    height: 6px;
+    min-width: 6px;
+    border-radius: 6px;
+    background-color: rgb(217, 217, 217);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    display: block;
+    height: 6px;
+    min-width: 6px;
+    border-radius: 6px;
+    background-color: rgb(159, 159, 159);
+}
+* {
+    font-family: "Arial Narrow Bold", sans-serif;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+.select-enter-from,
+.select-leave-to {
+    opacity: 0;
+    transform: scale(1);
+}
+.select-enter-active,
+.select-leave-active {
+    transform-origin: top center;
+    transition: opacity 0.4s cubic-bezier(0.5, 0, 0, 1.25),
+        transform 0.2s cubic-bezier(0.5, 0, 0, 1.25);
+}
+@import "./el-theme.scss";
