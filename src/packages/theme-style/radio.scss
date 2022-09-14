@@ -1,0 +1,75 @@
+
+.radio-wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 5px;
+    .radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all .5s;
+        transition: all .5s;
+        border: 1px solid $mainColor;
+        .hook {
+            background-color: $mainColor;
+            border-radius: 50%;
+            transition: all .5s;
+            transform: scale(0);
+            opacity: 0;
+        }
+        .box-click-it {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .label-name {
+        margin-left: 5px;
+        color: #66757f; // 在mounted
+    }
+}
+.disabled.radio-wrap {
+    cursor: not-allowed;
+    .radio {
+        border-color: $disableColor;
+    }
+    .label-name {
+        color: $disableColor;
+    }
+}
+$gap:6px;
+.radio-mini {
+    $width:15px;
+    .radio {
+        width: $width;
+        height: $width;
+    }
+    .hook {
+        width: $width - $gap;
+        height: $width - $gap;
+    }
+}
+.radio-small {
+    $width:18px;
+    .radio {
+        width: $width;
+        height: $width;
+    }
+    .hook {
+        width: $width - $gap;
+        height: $width - $gap;
+    }
+}
+.radio-large {
+    $width:21px;
+    .radio {
+        width: $width;
+        height: $width;
+    }
+    .hook {
+        width: $width - $gap;
+        height: $width - $gap;
+    }
+}

@@ -1,0 +1,160 @@
+.ls-button {
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+    outline: none;
+    border: none;
+    white-space: pre;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-right: 10px;
+    .loading {
+        animation: buttonRunLoading 2s linear infinite;
+    }
+}
+
+.round {
+    border-radius: 25px;
+}
+.disabled {
+    @include disabled;
+}
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+        &:deep {
+            path {
+                fill: rgb(221, 205, 205)
+            }
+        }
+    }
+}
+.ls-button-mini {
+    @include mini;
+    .loading{
+        min-width: 1vw;
+        height: 1vw;
+    }
+    .icon {
+        min-width: .9vw;
+        height: .9vw;
+    }
+}
+.ls-button-small {
+    @include small;
+    .loading {
+        min-width: 1.4vw;
+        height: 1.4vw;
+    }
+    .icon {
+        min-width: 1.2vw;
+        height: 1.2vw;
+    }
+}
+.ls-button-large {
+    @include large;
+    .loading {
+        min-width: 1.6vw;
+        height: 1.6vw;
+    }
+    .icon {
+        min-width: 1.7vw;
+        height: 1.7vw;
+    }
+}
+.ls-button-mini.icon-btn {
+    @include miniWidth;
+}
+.ls-button-small.icon-btn {
+    @include smallWidth;
+}
+.ls-button-large.icon-btn {
+    @include largeWidth;
+}
+.ls-button--text {
+    margin: 0;
+    padding: 0;
+    color: $mainColor;
+    border: none;
+    background: none!important;
+    .ls-btn-name {
+        padding: 0 5px!important;
+    }
+}
+
+@mixin svgHover($color) {
+    &:deep {
+        path {
+            fill: $color
+        }
+    }
+}
+.ls-button--default {
+    background-color: transparent;
+    border: 1px solid #d9d9d9;
+    color: #334458;
+    &:hover {
+        color: $mainColor;
+        border-color: $mainColor;
+        @include svgHover($mainColor);
+    }
+}
+.ls-button--default.disabled {
+    border: none;
+    color: white;
+}
+
+.ls-button--success {
+    background-color: $mainColor;
+    @include svgHover(white);
+    &:hover {
+        background-color: $mainColorHover;
+    }
+}
+.ls-button--success.plain {
+    background-color: transparent;
+    color: $mainColor;
+    border: 1px solid $mainColor!important;
+    @include svgHover($mainColor);
+    &:hover {
+        background-color: $mainColorHover;
+        color: white;
+        @include svgHover(white);
+    }
+}
+.ls-button--error {
+    background-color: $errorColor;
+    @include svgHover(white);
+    &:hover {
+        background-color: $errorColorHover;
+    }
+}
+.ls-button--warning {
+    background-color: $warningColor;
+    @include svgHover(white);
+    &:hover {
+        background-color: $warningColorHover;
+    }
+}
+.ls-button--info {
+    background-color: $noticeColor;
+    @include svgHover(white);
+    &:hover {
+        background-color: $noticeColorHover;
+    }
+}
+.icon-round {
+    border-radius: 50%;
+}
+.ls-btn-name {
+    padding: 0 10px;
+}
+@keyframes buttonRunLoading {
+    100% {
+        transform: rotate(360deg);
+    }
+}

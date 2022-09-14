@@ -1,0 +1,15 @@
+.bread {
+    width: 100%;
+    padding: $componentGap 0;
+    display: flex;
+    align-items: flex-end;
+    font-size: $NsndTitleSize;
+    color: $smallAreaTextColor;
+    .space {
+        padding: 0 5px;
+    }
+    .notice {
+        font-size: $NavFontSize;
+        color: $mainTitleColor;
+    }
+}

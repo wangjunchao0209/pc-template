@@ -1,0 +1,83 @@
+
+.checkbox-wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 5px;
+    .checkbox {
+        background-color: #ffffff;
+        display: inline-block;
+        border: 1px solid #cccccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .checkbox.hook:before {
+        content: '';
+        border-right: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        transform: rotate(40deg) translate(-1px, -1px);
+    }
+    .checkbox.half {
+        background-color: $mainColor;
+        text-align: center;
+        border: none;
+        &:before {
+            content: '';
+            width: 70%;
+            height: 2px;
+            background-color: white;
+        }
+    }
+    .label-name {
+        margin-left: 5px;
+        color: #66757f; // 在mounted
+    }
+    .box-click {
+        transition: all .5s;
+        background-color: $mainColor;
+        border: 0.5px solid #cccccc;
+        border: none;
+    }
+}
+.disabled.checkbox-wrap {
+    cursor: not-allowed;
+    .label-name {
+        color: $disableColor;
+    }
+}
+.checkbox-mini {
+    $width: 15px;
+    .checkbox {
+        width: $width;
+        height: $width;
+    }
+    .checkbox.hook:before {
+        width: 4px;
+        height: 8px;
+    }
+}
+.checkbox-small {
+    $width: 18px;
+    .checkbox {
+        width: $width;
+        height: $width;
+    }
+    .checkbox.hook:before {
+        width: 5px;
+        height: 10px;
+        transform: rotate(40deg) translate(0, -1px)!important;
+    }
+}
+.checkbox-large {
+    $width: 21px;
+    .checkbox {
+        width: $width;
+        height: $width;
+    }
+    .checkbox.hook:before {
+        width: 6px;
+        height: 12px;
+    }
+}

@@ -1,0 +1,18 @@
+.ls-trans {
+    font-size: 14px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    .trans-btn {
+        display: flex;
+        flex-direction: column;
+    }
+    &:deep {
+        .ls-button {
+            margin: 0;
+        }
+    }
+}

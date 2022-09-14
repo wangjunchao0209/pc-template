@@ -1,0 +1,90 @@
+.ls-tag {
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    margin: 2px;
+    transition: all 0.5s;
+    outline: none;
+    border: none;
+    white-space: pre;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2px;
+    border: 1px solid transparent;
+    opacity: 0;
+    animation: tagOpacity .3s ease-in .1s forwards;
+}
+.round {
+    border-radius: 25px;
+}
+.ls-tag-mini {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    .icon {
+        width: .7vw;
+        height: .7vw;
+    }
+}
+.ls-tag-small {
+    height: 25px;
+    line-height: 25px;
+    .icon {
+        width: .8vw;
+        height: .8vw;
+    }
+}
+.ls-tag-large {
+    height: 30px;
+    line-height: 30px;
+    .icon {
+        width: .85vw;
+        height: .85vw;
+    }
+}
+
+
+$color: var(--color);
+$background: var(--background);
+.ls-tag--success {
+    border-color: $mainColor;
+    color: $mainColor;
+    @if $background {
+        background-color: $mainColor;
+        color: white;
+    }
+}
+.ls-tag--error {
+    border-color: $errorColor;
+    color: $errorColor;
+}
+.ls-tag--warning {
+    border-color: $warningColor;
+    color: $warningColor;
+}
+.ls-tag--info {
+    border-color: $noticeColor;
+    color: $noticeColor;
+}
+.ls-tag--default {
+    @if $color {
+        border-color: $color;
+        color: $color;
+    } @else {
+        border-color: $defaultColor;
+        color: $defaultColor;
+    } 
+}
+.ls-tag--default.disabled {
+    border-color: $disableBackColor;
+    color: $disableColor;
+}
+
+.ls-tag-name {
+    padding: 0 5px;
+}
+@keyframes tagOpacity {
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,36 @@
+.ls-select-item{
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    .ls-select-check {
+        width: 15px;
+        height: 15px;
+        &:deep path {
+            fill: $mainColor;
+        }
+    }
+}
+
+.ls-select-item.disabled {
+    color: $disableColor;
+    &:hover {
+        background-color: transparent;
+        color: $disableColor;
+    }
+}
+.ls-select-item.disabled.active {
+    color: $mainColor;
+    background-color: $disableBackColor;
+}
+.ls-select-item.active {
+    background-color: rgba(4, 161, 126, 0.12);
+    color: $mainColor;
+}
+.ls-select-item:hover {
+    background-color: rgba(4, 161, 126, 0.08);
+    color: $darkGreen;
+}

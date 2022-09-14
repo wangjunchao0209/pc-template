@@ -1,0 +1,69 @@
+
+.ls-progress-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    .progress-text {
+        position: absolute;
+        font-size: 1vw;
+    }
+}
+.ls-progress-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    // overflow: hidden;
+    .ls-progress {
+        width: 100%;
+        height: var(--height);
+        background-color: #ccc;
+        position: relative;
+        // overflow: hidden;
+        .ls-progress-item {
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .ls-progress-text, .ls-progress-text-line {
+        font-size: .72vw;
+        color: #444;
+        margin-left: 10px;
+    }
+    .ls-progress-text-line {
+        font-size: 12px;
+        color: #fff;
+        position: absolute;
+        right: 0px;
+    }
+    .round {
+        border-radius: 25px;
+    }
+}
+.ls-progress-success {
+    background-color: $mainColor !important;
+}
+.ls-progress-error {
+    background-color: $errorColor!important;
+}
+.ls-progress-warning {
+    background-color: $warningColor !important;
+}
+.ls-progress-circle-success {
+    stroke: $mainColor
+}
+.ls-progress-circle-error {
+    stroke: $errorColor
+}
+.ls-progress-circle-warning {
+    stroke: $warningColor
+}

@@ -1,0 +1,76 @@
+.draw-pop {
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 5px 1px #d3d3d3;
+    .drawer-title {
+        padding: $moduleGap;
+        font-size: $ImportantTitleFontSize;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #e6e6e6;
+        display: flex;
+        justify-content: space-between;
+        .drawer-title-prop {
+            flex: .9;
+            line-break: anywhere;
+        }
+        .close {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            &:hover {
+                @include svgColor(#323232)
+            }
+        }
+    }
+    section {
+        flex: 1;
+        padding: $moduleGap;
+        overflow-y: auto;
+    }
+    .drawer-foot {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > button {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 15px;
+        }
+    }
+}
+.drawerShow {
+    animation: drawerRun .5s forwards;
+}
+@keyframes drawerRun {
+    100% {
+        right: 0
+    }
+}
+.pop-small {
+    width: 450px;
+    right: -450px;
+    
+}
+.pop-large {
+    width: 650px;
+    right: -650px;
+}
+.pop-lotlarge {
+    width: 950px;
+    right: -950px;
+}
+.pop-superlarge {
+    width: 70%;
+    right: -70%;
+}
+.pop-all {
+    width: 90%;
+    right: -90%;
+}

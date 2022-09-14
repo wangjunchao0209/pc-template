@@ -1,0 +1,51 @@
+
+.dialog {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    background-color: white;
+    border-radius: 9px;
+    .title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        user-select: none;
+        font-size: $TitleFontSize;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #333;
+        &:hover {
+            color: rgb(92, 90, 90);
+        }
+    }
+    .content {
+        width: 100%;
+        flex: 1;
+        font-size: 14px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #d7f1ff;
+        font-size: 1vw;
+        padding-bottom: 1.5rem;
+        > button {
+            width: 120px;
+        }
+    }
+}
